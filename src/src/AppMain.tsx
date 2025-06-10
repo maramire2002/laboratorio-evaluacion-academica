@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { AuthProvider, useAuth } from './hooks/useAuth';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import Layout from './components/layout/Layout';
-import Login from './components/auth/Login';
-import DashboardAlumno from './components/dashboards/DashboardAlumno';
-import DashboardDocente from './components/dashboards/DashboardDocente';
-import { Toaster } from './components/ui/toaster';
+import React from 'react';
+import { useAuth } from '../hooks/useAuth';
+import ErrorBoundary from '../components/ErrorBoundary';
+import Layout from '../components/layout/Layout';
+import Login from '../components/auth/Login';
+import DashboardAlumno from '../components/dashboards/DashboardAlumno';
+import DashboardDocente from '../components/dashboards/DashboardDocente';
+import { Toaster } from '../components/ui/toaster';
 const AppContent: React.FC = () => {
 const { isAuthenticated, isDocente, isAlumno } = useAuth();
 // Si no está autenticado, mostrar login
